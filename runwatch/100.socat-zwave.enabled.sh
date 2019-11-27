@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+if [[ -z "${SOCAT_ZWAVE_HOST}" -and -z "${SOCAT_ZWAVE_PORT}" ]]; then
+  exit 0
+fi
 if [[ -z "${SOCAT_ZWAVE_TYPE}" ]]; then
   SOCAT_ZWAVE_TYPE="tcp"
 fi

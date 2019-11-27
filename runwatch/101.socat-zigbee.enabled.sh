@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+if [[ -z "${SOCAT_ZIGBEE_HOST}" -and -z "${SOCAT_ZIGBEE_PORT}" ]]; then
+  exit 0
+fi
 if [[ -z "${SOCAT_ZIGBEE_TYPE}" ]]; then
   SOCAT_ZIGBEE_TYPE="tcp"
 fi
